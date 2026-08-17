@@ -1,0 +1,764 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #800000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   CORES PRINCIPAIS
+========================================= */
+
+/*
+VERMELHO:
+#800000
+
+VERMELHO ESCURO:
+#5c0000
+
+DOURADO:
+#d4af37
+
+DOURADO CLARO:
+#f1d477
+
+BRANCO:
+#ffffff
+*/
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+header {
+    width: 100%;
+    padding: 25px 7%;
+
+    background: #5c0000;
+
+    border-bottom: 1px solid #d4af37;
+}
+
+.logo {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #d4af37;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    padding: 80px 7%;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(212, 175, 55, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #8b0000,
+            #680000
+        );
+}
+
+.hero-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.85fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.tag {
+    display: inline-block;
+
+    color: #d4af37;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.05;
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    color: #f8eeee;
+
+    margin-bottom: 35px;
+
+    max-width: 560px;
+}
+
+
+/* =========================================
+   BOTÃO DOURADO
+========================================= */
+
+.btn-cta {
+    display: inline-block;
+
+    padding: 17px 30px;
+
+    background: #d4af37;
+
+    color: #5c0000;
+
+    border: 2px solid #d4af37;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.btn-cta:hover {
+    background: #f1d477;
+
+    border-color: #f1d477;
+
+    color: #5c0000;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(212, 175, 55, 0.3);
+}
+
+.btn-cta.large {
+    padding: 20px 40px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   IMAGEM HERO
+========================================= */
+
+.hero-image {
+    position: relative;
+
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    border: 3px solid #d4af37;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   SEÇÃO DE DOR
+========================================= */
+
+.pain-section {
+    padding: 100px 0;
+
+    background: #700000;
+}
+
+.pain-section h2,
+.features h2,
+.cta-section h2 {
+    font-family: 'Playfair Display', serif;
+
+    text-align: center;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    margin-bottom: 55px;
+
+    color: #ffffff;
+}
+
+.pain-section h2::after,
+.features h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+
+    height: 3px;
+
+    background: #d4af37;
+
+    margin: 20px auto 0;
+}
+
+.pain-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.pain-card {
+    padding: 35px;
+
+    background: #5c0000;
+
+    border: 1px solid #a57c18;
+
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+}
+
+.pain-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.pain-card h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    color: #d4af37;
+}
+
+.pain-card p {
+    color: #f7eeee;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   BENEFÍCIOS
+========================================= */
+
+.features {
+    padding: 100px 0;
+
+    background: #5c0000;
+
+    border-top: 1px solid #9d761b;
+
+    border-bottom: 1px solid #9d761b;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px;
+}
+
+.feature-item {
+    position: relative;
+
+    padding-left: 75px;
+}
+
+.number {
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    color: #d4af37;
+
+    opacity: 0.95;
+}
+
+.feature-item h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+}
+
+.feature-item p {
+    color: #f0dddd;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SOBRE MICHELLE
+========================================= */
+
+.about {
+    padding: 110px 7%;
+
+    background: #800000;
+}
+
+.about-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+}
+
+.about-image img {
+    width: 100%;
+
+    border-radius: 6px;
+
+    border: 3px solid #d4af37;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.about-text {
+    max-width: 550px;
+}
+
+.small-title {
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+}
+
+.about-text h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    background: #d4af37;
+
+    margin-top: 18px;
+}
+
+.about-text p {
+    color: #f5e8e8;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   OFERTA
+========================================= */
+
+.cta-section {
+    padding: 110px 0;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #920000 0%,
+            #5c0000 75%
+        );
+
+    color: #ffffff;
+
+    border-top: 2px solid #d4af37;
+}
+
+.cta-section h2 {
+    color: #ffffff;
+
+    max-width: 750px;
+
+    margin: 15px auto 20px;
+}
+
+.cta-section > .container > p {
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+
+    color: #f8eaea;
+
+    font-size: 17px;
+}
+
+.offer-tag {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #d4af37;
+}
+
+
+/* =========================================
+   PREÇO
+========================================= */
+
+.price-box {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin: 35px auto;
+
+    padding: 35px;
+
+    max-width: 400px;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    border: 2px solid #d4af37;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.old-price {
+    font-size: 16px;
+
+    text-decoration: line-through;
+
+    color: #e8caca;
+}
+
+.promo-text {
+    margin-top: 8px;
+
+    font-size: 15px;
+
+    color: #ffffff;
+}
+
+.new-price {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 58px;
+
+    font-weight: 700;
+
+    color: #d4af37;
+
+    margin: 5px 0;
+}
+
+.installments {
+    font-size: 14px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   GARANTIA
+========================================= */
+
+.garantia {
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    color: #f0dddd;
+}
+
+.garantia strong {
+    color: #d4af37;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #3d0000;
+
+    color: #d4af37;
+
+    font-size: 12px;
+
+    border-top: 1px solid #d4af37;
+}
+
+
+/* =========================================
+   TABLET / CELULAR
+========================================= */
+
+@media (max-width: 850px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .hero p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-image {
+        max-width: 500px;
+
+        margin: auto;
+    }
+
+    .pain-section,
+    .features,
+    .about,
+    .cta-section {
+        padding: 75px 0;
+    }
+
+    .pain-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .about {
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+    .about-text {
+        margin: auto;
+    }
+
+    .about-text h2 {
+        font-size: 38px;
+    }
+
+    .about-text h2::after {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .cta-section {
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+    .btn-cta {
+        width: 100%;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .pain-section h2,
+    .features h2,
+    .cta-section h2 {
+        font-size: 32px;
+    }
+
+    .feature-item {
+        padding-left: 60px;
+    }
+
+    .number {
+        font-size: 30px;
+    }
+
+    .new-price {
+        font-size: 45px;
+    }
+
+}
