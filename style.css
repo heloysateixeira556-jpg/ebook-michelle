@@ -1,6 +1,7 @@
 /* =========================================
-   CONFIGURAÇÕES GERAIS
+   CONFIGURAÇÕES GERAIS E TIPOGRAFIA
 ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -13,10 +14,11 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: #800000;
-    color: #ffffff;
-    line-height: 1.6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #faf8f5;
+    color: #2b2b2b;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -28,629 +30,488 @@ a {
     text-decoration: none;
 }
 
-
 /* =========================================
-   CORES PRINCIPAIS
+   PALETA DE CORES (PALETA EDITORIAL / LUXO)
+   - Fundo leve: #faf8f5
+   - Fundo cartões: #f3ede6 / #ffffff
+   - Texto escuro: #2b2b2b
+   - Vermelho sofisticado (Vinho/Borgonha): #7a1c22 (Hover: #5a1217)
+   - Dourado sutil: #c5a059 (Soft gold: #e8d5b7)
 ========================================= */
-
-/*
-VERMELHO:
-#800000
-
-VERMELHO ESCURO:
-#5c0000
-
-DOURADO:
-#d4af37
-
-DOURADO CLARO:
-#f1d477
-
-BRANCO:
-#ffffff
-*/
-
 
 /* =========================================
    CABEÇALHO
 ========================================= */
-
 header {
     width: 100%;
-    padding: 25px 7%;
-
-    background: #5c0000;
-
-    border-bottom: 1px solid #d4af37;
+    padding: 30px 7%;
+    background: #faf8f5;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 18px;
-
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
     font-weight: 700;
-
-    letter-spacing: 3px;
-
-    color: #d4af37;
-
+    letter-spacing: 4px;
+    color: #7a1c22;
     text-align: center;
+    text-transform: uppercase;
 }
 
-
 /* =========================================
-   HERO
+   HERO SECTION
 ========================================= */
-
 .hero {
-    padding: 80px 7%;
-
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(212, 175, 55, 0.12),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #8b0000,
-            #680000
-        );
+    padding: 90px 7% 100px;
+    background: radial-gradient(circle at 80% 20%, rgba(197, 160, 89, 0.08), transparent 50%),
+                linear-gradient(180deg, #faf8f5 0%, #f4efe9 100%);
+    position: relative;
 }
 
 .hero-container {
     max-width: 1200px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns: 1fr 0.85fr;
-
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 70px;
-
     align-items: center;
 }
 
 .hero-text {
-    max-width: 600px;
+    max-width: 620px;
 }
 
 .tag {
     display: inline-block;
-
-    color: #d4af37;
-
-    font-size: 12px;
-
+    color: #c5a059;
+    background: rgba(197, 160, 89, 0.1);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 2px;
-
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-
-    font-size: clamp(42px, 5vw, 68px);
-
-    line-height: 1.05;
-
-    color: #ffffff;
-
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 4.8vw, 64px);
+    font-weight: 600;
+    line-height: 1.1;
+    color: #1a1a1a;
     margin-bottom: 25px;
+    letter-spacing: -0.5px;
 }
 
 .hero p {
-    font-size: 18px;
-
-    color: #f8eeee;
-
-    margin-bottom: 35px;
-
-    max-width: 560px;
+    font-size: 17px;
+    color: #555555;
+    margin-bottom: 40px;
+    max-width: 540px;
+    font-weight: 400;
 }
 
-
 /* =========================================
-   BOTÃO DOURADO
+   BOTÕES (VERMELHO COM ACCENT DOURADO)
 ========================================= */
-
 .btn-cta {
     display: inline-block;
-
-    padding: 17px 30px;
-
-    background: #d4af37;
-
-    color: #5c0000;
-
-    border: 2px solid #d4af37;
-
-    border-radius: 4px;
-
+    padding: 18px 36px;
+    background: #7a1c22;
+    color: #ffffff;
+    border: 1px solid #7a1c22;
+    border-radius: 2px;
     font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.8px;
-
-    transition: all 0.3s ease;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 25px rgba(122, 28, 34, 0.18);
+    position: relative;
 }
 
 .btn-cta:hover {
-    background: #f1d477;
-
-    border-color: #f1d477;
-
-    color: #5c0000;
-
+    background: #5a1217;
+    border-color: #c5a059;
+    color: #ffffff;
     transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 30px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 30px rgba(122, 28, 34, 0.28);
 }
 
 .btn-cta.large {
-    padding: 20px 40px;
-
+    padding: 22px 48px;
     font-size: 14px;
 }
-
 
 /* =========================================
    IMAGEM HERO
 ========================================= */
-
 .hero-image {
     position: relative;
-
     width: 100%;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c5a059;
+    border-radius: 4px;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero-image img {
+    position: relative;
+    z-index: 2;
     width: 100%;
-
-    max-height: 650px;
-
+    max-height: 620px;
     object-fit: cover;
-
-    border-radius: 6px;
-
-    border: 3px solid #d4af37;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.45);
+    border-radius: 4px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
 }
 
-
 /* =========================================
-   CONTAINER
+   CONTAINER REUTILIZÁVEL
 ========================================= */
-
 .container {
     width: 90%;
-
     max-width: 1100px;
-
     margin: auto;
 }
 
-
 /* =========================================
-   SEÇÃO DE DOR
+   SEÇÃO DE DOR / DESAFIOS
 ========================================= */
-
 .pain-section {
-    padding: 100px 0;
-
-    background: #700000;
+    padding: 110px 0;
+    background: #ffffff;
 }
 
 .pain-section h2,
 .features h2,
 .cta-section h2 {
-    font-family: 'Playfair Display', serif;
-
+    font-family: 'Cormorant Garamond', serif;
     text-align: center;
-
-    font-size: clamp(32px, 4vw, 48px);
-
-    line-height: 1.15;
-
-    margin-bottom: 55px;
-
-    color: #ffffff;
+    font-size: clamp(32px, 3.8vw, 48px);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 60px;
+    color: #1a1a1a;
 }
 
 .pain-section h2::after,
 .features h2::after {
     content: "";
-
     display: block;
-
-    width: 70px;
-
-    height: 3px;
-
-    background: #d4af37;
-
-    margin: 20px auto 0;
+    width: 50px;
+    height: 2px;
+    background: #c5a059;
+    margin: 22px auto 0;
 }
 
 .pain-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
+    gap: 30px;
 }
 
 .pain-card {
-    padding: 35px;
-
-    background: #5c0000;
-
-    border: 1px solid #a57c18;
-
-    border-radius: 6px;
-
-    transition: all 0.3s ease;
+    padding: 40px 32px;
+    background: #faf8f5;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-top: 3px solid #7a1c22;
+    border-radius: 4px;
+    transition: all 0.35s ease;
 }
 
 .pain-card:hover {
-    transform: translateY(-6px);
-
-    border-color: #d4af37;
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px);
+    background: #ffffff;
+    border-color: #c5a059;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
 .pain-card h3 {
-    font-family: 'Playfair Display', serif;
-
-    font-size: 24px;
-
-    margin-bottom: 15px;
-
-    color: #d4af37;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #7a1c22;
 }
 
 .pain-card p {
-    color: #f7eeee;
-
+    color: #555555;
     font-size: 15px;
+    line-height: 1.65;
 }
 
-
 /* =========================================
-   BENEFÍCIOS
+   BENEFÍCIOS / CONQUISTAS
 ========================================= */
-
 .features {
-    padding: 100px 0;
-
-    background: #5c0000;
-
-    border-top: 1px solid #9d761b;
-
-    border-bottom: 1px solid #9d761b;
+    padding: 110px 0;
+    background: #f4efe9;
+    border-top: 1px solid rgba(197, 160, 89, 0.2);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
 }
 
 .feature-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
-    gap: 45px;
+    gap: 50px 60px;
 }
 
 .feature-item {
     position: relative;
-
-    padding-left: 75px;
+    padding-left: 80px;
 }
 
 .number {
     position: absolute;
-
     left: 0;
-
-    top: 0;
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 42px;
-
-    color: #d4af37;
-
-    opacity: 0.95;
+    top: -5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #c5a059;
+    line-height: 1;
 }
 
 .feature-item h3 {
-    font-family: 'Playfair Display', serif;
-
-    font-size: 25px;
-
-    margin-bottom: 10px;
-
-    color: #ffffff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
 }
 
 .feature-item p {
-    color: #f0dddd;
-
+    color: #555555;
     font-size: 15px;
+    line-height: 1.65;
 }
-
 
 /* =========================================
    SOBRE MICHELLE
 ========================================= */
-
 .about {
-    padding: 110px 7%;
-
-    background: #800000;
+    padding: 120px 7%;
+    background: #ffffff;
 }
 
 .about-container {
     max-width: 1100px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns: 0.8fr 1fr;
-
-    gap: 70px;
-
+    grid-template-columns: 0.85fr 1.1fr;
+    gap: 80px;
     align-items: center;
 }
 
 .about-image {
+    position: relative;
     width: 100%;
+}
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #7a1c22;
+    border-radius: 4px;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .about-image img {
+    position: relative;
+    z-index: 2;
     width: 100%;
-
-    border-radius: 6px;
-
-    border: 3px solid #d4af37;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07);
 }
 
 .about-text {
-    max-width: 550px;
+    max-width: 580px;
 }
 
 .small-title {
-    display: block;
-
-    color: #d4af37;
-
-    font-size: 12px;
-
+    display: inline-block;
+    color: #c5a059;
+    font-size: 11px;
     font-weight: 700;
-
-    letter-spacing: 2px;
-
+    letter-spacing: 2.5px;
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 .about-text h2 {
-    font-family: 'Playfair Display', serif;
-
-    font-size: 45px;
-
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 600;
     line-height: 1.15;
-
-    color: #ffffff;
-
+    color: #1a1a1a;
     margin-bottom: 25px;
 }
 
 .about-text h2::after {
     content: "";
-
     display: block;
-
-    width: 60px;
-
-    height: 3px;
-
-    background: #d4af37;
-
-    margin-top: 18px;
+    width: 50px;
+    height: 2px;
+    background: #c5a059;
+    margin-top: 20px;
 }
 
 .about-text p {
-    color: #f5e8e8;
-
-    margin-bottom: 20px;
-
+    color: #555555;
+    margin-bottom: 22px;
     font-size: 16px;
+    line-height: 1.7;
 }
 
-
 /* =========================================
-   OFERTA
+   OFERTA / CTA FINAL
 ========================================= */
-
 .cta-section {
-    padding: 110px 0;
-
+    padding: 120px 0;
     text-align: center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #920000 0%,
-            #5c0000 75%
-        );
-
-    color: #ffffff;
-
-    border-top: 2px solid #d4af37;
+    background: linear-gradient(180deg, #faf8f5 0%, #f2ebe1 100%);
+    border-top: 1px solid rgba(197, 160, 89, 0.25);
 }
 
 .cta-section h2 {
-    color: #ffffff;
-
-    max-width: 750px;
-
+    color: #1a1a1a;
+    max-width: 780px;
     margin: 15px auto 20px;
 }
 
 .cta-section > .container > p {
-    max-width: 650px;
-
+    max-width: 620px;
     margin: 0 auto 40px;
-
-    color: #f8eaea;
-
+    color: #555555;
     font-size: 17px;
 }
 
 .offer-tag {
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
+    font-size: 11px;
+    letter-spacing: 2.5px;
     font-weight: 700;
-
-    color: #d4af37;
+    color: #7a1c22;
+    text-transform: uppercase;
 }
 
-
 /* =========================================
-   PREÇO
+   PREÇO / PRICE BOX
 ========================================= */
-
 .price-box {
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
-    margin: 35px auto;
-
-    padding: 35px;
-
-    max-width: 400px;
-
-    background: rgba(0, 0, 0, 0.18);
-
-    border: 2px solid #d4af37;
-
+    margin: 40px auto;
+    padding: 45px 35px;
+    max-width: 440px;
+    background: #ffffff;
+    border: 1px solid #c5a059;
     border-radius: 6px;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 20px 50px rgba(122, 28, 34, 0.08);
+    position: relative;
 }
 
 .old-price {
-    font-size: 16px;
-
+    font-size: 15px;
     text-decoration: line-through;
-
-    color: #e8caca;
+    color: #888888;
 }
 
 .promo-text {
-    margin-top: 8px;
-
-    font-size: 15px;
-
-    color: #ffffff;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #555555;
+    font-weight: 500;
 }
 
 .new-price {
-    font-family: 'Playfair Display', serif;
-
-    font-size: 58px;
-
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
     font-weight: 700;
-
-    color: #d4af37;
-
+    color: #7a1c22;
     margin: 5px 0;
+    line-height: 1;
 }
 
 .installments {
-    font-size: 14px;
-
-    color: #ffffff;
+    font-size: 13px;
+    color: #c5a059;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
-
 
 /* =========================================
    GARANTIA
 ========================================= */
-
 .garantia {
-    margin-top: 30px;
-
-    font-size: 13px;
-
-    color: #f0dddd;
+    margin-top: 35px;
+    font-size: 14px;
+    color: #666666;
 }
 
 .garantia strong {
-    color: #d4af37;
+    color: #7a1c22;
 }
 
+.garantia span {
+    display: block;
+    margin-top: 5px;
+    color: #777777;
+}
 
 /* =========================================
    RODAPÉ
 ========================================= */
-
 footer {
-    padding: 25px;
-
+    padding: 35px 20px;
     text-align: center;
-
-    background: #3d0000;
-
-    color: #d4af37;
-
+    background: #1a1a1a;
+    color: #c5a059;
     font-size: 12px;
-
-    border-top: 1px solid #d4af37;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(197, 160, 89, 0.3);
 }
 
-
 /* =========================================
-   TABLET / CELULAR
+   RESPONSIVIDADE (TABLET / CELULAR)
 ========================================= */
-
 @media (max-width: 850px) {
-
     header {
         padding: 20px;
     }
 
     .logo {
-        font-size: 14px;
+        font-size: 16px;
+        letter-spacing: 2px;
     }
 
     .hero {
-        padding: 55px 20px;
+        padding: 60px 20px 80px;
     }
 
     .hero-container {
         grid-template-columns: 1fr;
-
-        gap: 40px;
-
+        gap: 50px;
         text-align: center;
     }
 
@@ -660,17 +521,15 @@ footer {
 
     .hero p {
         margin-left: auto;
-
         margin-right: auto;
     }
 
-    .hero h1 {
-        font-size: 43px;
+    .hero-image::before {
+        display: none;
     }
 
     .hero-image {
-        max-width: 500px;
-
+        max-width: 480px;
         margin: auto;
     }
 
@@ -678,7 +537,7 @@ footer {
     .features,
     .about,
     .cta-section {
-        padding: 75px 0;
+        padding: 80px 0;
     }
 
     .pain-grid {
@@ -687,66 +546,47 @@ footer {
 
     .feature-grid {
         grid-template-columns: 1fr;
-
-        gap: 35px;
+        gap: 40px;
     }
 
     .about {
         padding-left: 20px;
-
         padding-right: 20px;
     }
 
     .about-container {
         grid-template-columns: 1fr;
-
-        gap: 40px;
-
+        gap: 50px;
         text-align: center;
+    }
+
+    .about-image::after {
+        display: none;
     }
 
     .about-text {
         margin: auto;
     }
 
-    .about-text h2 {
-        font-size: 38px;
-    }
-
     .about-text h2::after {
         margin-left: auto;
-
         margin-right: auto;
     }
 
     .cta-section {
         padding-left: 20px;
-
         padding-right: 20px;
     }
 
     .btn-cta {
         width: 100%;
-
         text-align: center;
     }
 }
 
-
-/* =========================================
-   CELULAR PEQUENO
-========================================= */
-
 @media (max-width: 450px) {
-
     .hero h1 {
         font-size: 36px;
-    }
-
-    .pain-section h2,
-    .features h2,
-    .cta-section h2 {
-        font-size: 32px;
     }
 
     .feature-item {
@@ -754,11 +594,10 @@ footer {
     }
 
     .number {
-        font-size: 30px;
+        font-size: 38px;
     }
 
     .new-price {
-        font-size: 45px;
+        font-size: 52px;
     }
-
 }
