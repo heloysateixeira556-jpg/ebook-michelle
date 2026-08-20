@@ -31,15 +31,6 @@ a {
 }
 
 /* =========================================
-   PALETA DE CORES (PALETA EDITORIAL / LUXO)
-   - Fundo leve: #faf8f5
-   - Fundo cartões: #f3ede6 / #ffffff
-   - Texto escuro: #2b2b2b
-   - Vermelho sofisticado (Vinho/Borgonha): #7a1c22 (Hover: #5a1217)
-   - Dourado sutil: #c5a059 (Soft gold: #e8d5b7)
-========================================= */
-
-/* =========================================
    CABEÇALHO
 ========================================= */
 header {
@@ -117,7 +108,7 @@ header {
 }
 
 /* =========================================
-   BOTÕES (VERMELHO COM ACCENT DOURADO)
+   BOTÕES
 ========================================= */
 .btn-cta {
     display: inline-block;
@@ -301,7 +292,7 @@ header {
 }
 
 /* =========================================
-   SOBRE MICHELLE
+   SOBRE
 ========================================= */
 .about {
     padding: 120px 7%;
@@ -414,7 +405,7 @@ header {
 }
 
 /* =========================================
-   PREÇO / PRICE BOX
+   PRICE BOX
 ========================================= */
 .price-box {
     display: flex;
